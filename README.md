@@ -6,12 +6,12 @@
 
 ### CREATE MUSIC
 
-	MÉTODO : *POST* 
-	URI    : */backend/?/create_song*
+MÉTODO : *POST* 
+URI    : */backend/?/create_song*
 
-	#### EXEMPLO DE USO
+#### EXEMPLO DE USO
 
-	```js
+```js
 		import axios from "axios";
 
 		const options = {
@@ -32,21 +32,21 @@
 		}).catch(function (error) {
 		  console.error(error);
 		});
-	```
+```
 
-	#### RESPONSE
+#### RESPONSE
 
-	- SUCESSO => 201
-	- ERRO => 501
+- SUCESSO => 201
+- ERRO => 501
 
 ### TAKE ALL MUSICS
 
-	MÉTODO : *GET* 
-	URI    : */backend/?/take_songs*
+MÉTODO : *GET* 
+URI    : */backend/?/take_songs*
 
-	#### EXEMPLO 
+#### EXEMPLO 
 
-	```js
+```js
 		import axios from "axios";
 
 		const options = {
@@ -60,13 +60,13 @@
 		}).catch(function (error) {
 		  console.error(error);
 		});
-	```
+```
 
-	#### RESPONSE
+#### RESPONSE
 
-	- STATUS 200
+- STATUS 200
 
-	```json
+```json
 		[
 		  {
 		    "id": "1",
@@ -83,20 +83,20 @@
 		    "singer": "claudio"
 		  }
 		]
-	```
+```
 
-	- STATUS 401
+- STATUS 401
 
-		- não existem musicas
+	- não existem musicas
 
 ### TAKE ONE MUSIC
 
-	MÉTODO : *GET* 
-	URI    : */backend/?idToSearch=9999*
+MÉTODO : *GET* 
+URI    : */backend/?idToSearch=9999*
 
-	#### EXEMPLO
+#### EXEMPLO
 
-	```js
+```js
 		import axios from "axios";
 
 		const options = {
@@ -110,14 +110,14 @@
 		}).catch(function (error) {
 		  console.error(error);
 		});
-	```
+```
 
-	#### RESPONSE
+#### RESPONSE
 
-	- STATUS 404
-		- POSTAGEM NÃO ENCONTRADA
-	- STATUS 200
-		```json
+- STATUS 404
+	- POSTAGEM NÃO ENCONTRADA
+- STATUS 200
+```json
 			{
 			  "id": "4",
 			  "nome": "alguma coisa",
@@ -125,14 +125,14 @@
 			  "singer": "cobalto",
 			  "description": "ddjd dddmd ddjjd"
 			}
-		```
+```
 
 ### DELETE MUSIC
 
-	MÉTODO : *DELETE*
-	URI    : */backend/?idToDelete=9999*
+MÉTODO : *DELETE*
+URI    : */backend/?idToDelete=9999*
 
-	```js
+```js
 		import axios from "axios";
 
 		const options = {
@@ -146,10 +146,10 @@
 		}).catch(function (error) {
 		  console.error(error);
 		});
-	```
+```
 
-	#### RESPONSE 
-	- STATUS 301
-		deletado com sucesso
-	- STATUS 404
-		não encontrada a musica
+#### RESPONSE 
+- STATUS 301
+	- deletado com sucesso
+- STATUS 404
+	- não encontrada a musica
